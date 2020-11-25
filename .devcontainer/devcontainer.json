@@ -1,0 +1,19 @@
+{
+  "name": "Node.js 12",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/zsh"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "yatki.vscode-surround",
+    "tabnine.tabnine-vscode",
+    "actboy168.tasks",
+    "pflannery.vscode-versionlens",
+    "mutantdino.resourcemonitor",
+    "wakatime.vscode-wakatime",
+    "equinusocio.vsc-material-theme",
+    "pkief.material-icon-theme"
+  ],
+  "postCreateCommand": "yarn install",
+}
