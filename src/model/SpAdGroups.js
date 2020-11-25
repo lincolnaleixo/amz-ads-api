@@ -81,7 +81,7 @@ class SpAdGroups extends DefaultApi {
 	 */
 	async getAdGroups(profileId, options = {}) {
 		this.headers['Amazon-Advertising-API-Scope'] = profileId
-		const url = this.createUrl([ this.api ], 'sp')
+		let url = this.createUrl([ this.api ], 'sp')
 
 		if (options) url += `?${this.qs.stringify(options)}`
 
