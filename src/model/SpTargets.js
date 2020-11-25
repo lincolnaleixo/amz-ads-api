@@ -224,6 +224,29 @@ class SpTargets extends DefaultApi {
 		if (options) url += `?${this.qs.stringify(options)}`
 
 		const requestItems = {
+			method: 'POST',
+			headers: this.headers,
+			url,
+			responseType: 'json',
+		}
+		const response = await this.request(requestItems)
+
+		return response.data
+	}
+
+	async getKeywordsRecommendations(profileId, options) {
+		this.apiVersion = 'v3'
+		this.headers['Amazon-Advertising-API-Scope'] = profileId
+		let url = this.createUrl([
+			this.api,
+			'keywords',
+			'recommendation',
+		], 'sp')
+
+		if (options) url += `?${this.qs.stringify(options)}`
+
+		const requestItems = {
+			method: 'POST',
 			headers: this.headers,
 			url,
 			responseType: 'json',

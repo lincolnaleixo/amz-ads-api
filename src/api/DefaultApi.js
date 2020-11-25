@@ -69,6 +69,8 @@ class DefaultApi {
 	createUrl(params, type = undefined) {
 		let url = ''
 
+		if (this.apiVersion === 'v3') this.apiVersion = ''
+
 		if (type) url = this.urljoin(this.endpoints.NA, this.apiVersion, type)
 		else url = this.urljoin(this.endpoints.NA, this.apiVersion)
 

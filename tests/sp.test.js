@@ -16,7 +16,7 @@ const AmzAdsApi = require('../src');
 	// for (let i = 0; i < profileSellerList.length; i += 1) {
 	const profile = profileSellerList[1]
 	console.log(`Testing from profile id ${profile.profileId}`)
-
+	amzAdsApi.SpAdGroups.createAdGroups('1111', { name: '1' })
 	// console.log(`Creating a test campaign`)
 	// const campaignOptions = [
 	// 	{

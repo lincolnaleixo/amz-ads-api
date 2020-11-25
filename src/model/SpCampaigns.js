@@ -149,6 +149,21 @@ class SpCampaigns extends DefaultApi {
 		return response.data
 	}
 
+	async getBudgetRecommendations(profileId, campaignIdsArray) {
+		this.headers['Amazon-Advertising-API-Scope'] = profileId
+		const url = this.createUrl([ this.api, 'extended' ], 'sp')
+		const requestItems = {
+			method: 'POST',
+			headers: this.headers,
+			url,
+			responseType: 'json',
+			body: campaignIdsArray,
+		}
+		const response = await this.request(requestItems)
+
+		return response.data
+	}
+
 }
 
 module.exports = SpCampaigns

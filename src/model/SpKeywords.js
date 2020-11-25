@@ -157,6 +157,7 @@ class SpKeywords extends DefaultApi {
 			'bidRecommendations',
 		], 'sp')
 		const requestItems = {
+			method: 'POST',
 			headers: this.headers,
 			url,
 			responseType: 'json',
@@ -173,6 +174,7 @@ class SpKeywords extends DefaultApi {
 		if (options) url += `?${this.qs.stringify(options)}`
 
 		const requestItems = {
+			method: 'POST',
 			headers: this.headers,
 			url,
 			responseType: 'json',
